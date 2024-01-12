@@ -10,9 +10,10 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        maven { setUrl("https://jitpack.io") }
     }
 }
 
 rootProject.name = "Dera"
-include(":app")
- 
+include(":presentation")
+include(":data")

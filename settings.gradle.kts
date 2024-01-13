@@ -18,3 +18,4 @@ rootProject.name = "Dera"
 include(":presentation")
 include(":data")
 include(":domain")
+include(":di")

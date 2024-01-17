@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.uiel.dera"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.uiel.dera"

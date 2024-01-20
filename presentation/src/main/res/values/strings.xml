@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Dera</string>
+    <string name="signin">signin</string>
+    <string name="signup">signup</string>
 </resources>

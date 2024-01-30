@@ -6,6 +6,7 @@ object ProjectProperties {
     const val NAME_SPACE_DOMAIN = "com.uiel.domain"
 
     const val COMPILE_SDK = 34
+    const val TARGET_SDK = 33
     const val MIN_SDK = 33
 
     const val VERSION_CODE = 1

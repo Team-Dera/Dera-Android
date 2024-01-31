@@ -25,17 +25,20 @@ import com.uiel.dera.Screen
 
 @Composable
 fun SignInScreen(
-    navController: NavController, signInScreenViewModel: SignInScreenViewModel = viewModel()
+    navController: NavController,
+    signInScreenViewModel: SignInScreenViewModel = viewModel()
 ) {
     val uiState by signInScreenViewModel.signInState.observeAsState()
 
     Column(
         modifier = Modifier.fillMaxSize()
     ) {
-        SignInInputs(id = { uiState?.id ?: "" },
+        SignInInputs(
+            id = { uiState?.id ?: "" },
             password = { uiState?.password ?: "" },
             onIdChanged = { signInScreenViewModel.updateId(id = it) },
-            onPwChanged = { signInScreenViewModel.updatePassword(password = it) })
+            onPwChanged = { signInScreenViewModel.updatePassword(password = it) }
+        )
         Spacer(modifier = Modifier.weight(1f))
         SignInBtn(navController)
     }
@@ -51,12 +54,16 @@ private fun SignInInputs(
     Box(
         modifier = Modifier
             .padding(
-                start = 20.dp, end = 20.dp, top = 100.dp
+                start = 20.dp,
+                end = 20.dp,
+                top = 100.dp
             )
             .fillMaxWidth()
             .height(50.dp)
             .border(
-                width = 1.dp, color = Color.Black, shape = RoundedCornerShape(8.dp)
+                width = 1.dp,
+                color = Color.Black,
+                shape = RoundedCornerShape(8.dp)
             )
     ) {
         BasicTextField(
@@ -78,12 +85,16 @@ private fun SignInInputs(
     Box(
         modifier = Modifier
             .padding(
-                start = 20.dp, end = 20.dp, top = 40.dp
+                start = 20.dp,
+                end = 20.dp,
+                top = 40.dp
             )
             .fillMaxWidth()
             .height(50.dp)
             .border(
-                width = 1.dp, color = Color.Black, shape = RoundedCornerShape(8.dp)
+                width = 1.dp,
+                color = Color.Black,
+                shape = RoundedCornerShape(8.dp)
             )
 
     ) {

@@ -8,17 +8,17 @@ object DeraUrl {
 
     object User {
         const val SignIn = "$user/token"
-        const val SignUp = "$user/"
+        const val SignUp = user
     }
 
     object Feed {
-        const val CreateFeed = "$feed/"
+        const val CreateFeed = feed
         const val SearchFeed = "$feed/{feed_id}"
     }
 
     object Notification {
-        const val SaveToken = "$notification/"
-        const val SearchAlarmList = "$notification/"
+        const val SaveToken = notification
+        const val SearchAlarmList = notification
     }
 
     object Like {

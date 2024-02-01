@@ -34,6 +34,8 @@ android {
 
 dependencies {
 
+    implementation(project(":domain"))
+
     implementation(Dependency.ANDROIDX.CORE)
     implementation(Dependency.ANDROIDX.APPCOMPAT)
     implementation(Dependency.ANDROIDX.MATERIAL)

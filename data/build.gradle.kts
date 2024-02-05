@@ -1,7 +1,13 @@
+import java.util.Properties
+
 plugins {
     id(BuildPlugins.ANDROID_LIBRARY)
     id(BuildPlugins.KOTLIN_ANDROID_PLUGIN)
+    id(BuildPlugins.KOTLIN_KAPT)
 }
+
+val properties = Properties()
+properties.load(project.rootProject.file("local.properties").inputStream())
 
 android {
     namespace = ProjectProperties.NAME_SPACE_DATA
@@ -12,6 +18,8 @@ android {
 
         testInstrumentationRunner = ProjectProperties.TEST_RUNNER
         consumerProguardFiles(ProjectProperties.PROGUARD_RULES)
+
+        buildConfigField("String","BASE_URL",properties.getProperty("BASE_URL"))
     }
 
     buildTypes {
@@ -30,6 +38,13 @@ android {
     kotlinOptions {
         jvmTarget = ProjectProperties.JVM_VERSION
     }
+    buildFeatures {
+        buildConfig = true
+    }
+}
+
+kapt {
+    correctErrorTypes = true
 }
 
 dependencies {
@@ -44,6 +59,9 @@ dependencies {
     implementation(Dependency.RETROFIT.GSON_CONVERT)
     implementation(Dependency.OKHTTP.OKHTTP)
     implementation(Dependency.OKHTTP.LOGGING_INTERCEPTOR)
+
+    implementation(Dependency.HILT.HILT)
+    kapt(Dependency.HILT.HILT_COMPILE)
 
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")

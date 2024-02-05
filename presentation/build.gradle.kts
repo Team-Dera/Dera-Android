@@ -1,6 +1,8 @@
 plugins {
     id(BuildPlugins.ANDROID_APPLICATION_PLUGIN)
     id(BuildPlugins.KOTLIN_ANDROID_PLUGIN)
+    id(BuildPlugins.HILT_PLUGIN)
+    id(BuildPlugins.KOTLIN_KAPT)
 }
 
 android {
@@ -62,6 +64,9 @@ dependencies {
     implementation(Dependency.COMPOSE.NAVIGATION)
     implementation(Dependency.COMPOSE.ACTIVITY)
     implementation(platform(Dependency.COMPOSE.BOM))
+
+    implementation(Dependency.HILT.HILT)
+    kapt(Dependency.HILT.HILT_COMPILE)
 
     implementation("androidx.compose.ui:ui")
     implementation("androidx.compose.ui:ui-graphics")

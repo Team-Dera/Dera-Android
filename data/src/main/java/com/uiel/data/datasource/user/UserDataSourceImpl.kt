@@ -6,8 +6,9 @@ import com.uiel.data.model.signin.SignInResponse
 import com.uiel.data.model.signup.SignUpRequest
 import com.uiel.data.model.signup.SignUpResponse
 import com.uiel.data.util.ExceptionHandler
+import javax.inject.Inject
 
-class UserDataSourceImpl(
+class UserDataSourceImpl @Inject constructor(
     private val userApi: UserApi,
 ) : UserDataSource {
     override suspend fun postSignUp(

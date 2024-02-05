@@ -3,9 +3,11 @@ package com.uiel.data.storage
 import android.content.Context
 import android.content.Context.MODE_PRIVATE
 import android.content.SharedPreferences
+import dagger.hilt.android.qualifiers.ApplicationContext
+import javax.inject.Inject
 
-class UserDataStorageImpl(
-    private val context: Context
+class UserDataStorageImpl @Inject constructor(
+    @ApplicationContext private val context: Context,
 ) : UserDataStorage {
     override fun fetchAccessToken(): String {
         return getString(UserPersonKey.ACCESS_TOKEN)

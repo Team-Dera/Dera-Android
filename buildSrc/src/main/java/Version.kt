@@ -2,7 +2,7 @@ object Version {
     const val RETROFIT = "2.9.0"
     const val OKHTTP = "4.12.0"
 
-    const val HILT = "2.44.2"
+    const val HILT = "2.45"
 
     const val CORE_KTX = "1.9.0"
     const val APPCOMPAT = "1.6.1"

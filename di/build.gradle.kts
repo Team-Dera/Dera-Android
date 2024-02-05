@@ -1,6 +1,8 @@
 plugins {
     id(BuildPlugins.ANDROID_LIBRARY)
     id(BuildPlugins.KOTLIN_ANDROID_PLUGIN)
+    id(BuildPlugins.HILT_PLUGIN)
+    id(BuildPlugins.KOTLIN_KAPT)
 }
 
 android {
@@ -32,11 +34,18 @@ android {
     }
 }
 
+kapt {
+    correctErrorTypes = true
+}
+
 dependencies {
 
     implementation(Dependency.ANDROIDX.CORE)
     implementation(Dependency.ANDROIDX.APPCOMPAT)
     implementation(Dependency.ANDROIDX.MATERIAL)
+
+    implementation(Dependency.HILT.HILT)
+    kapt(Dependency.HILT.HILT_COMPILE)
 
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")

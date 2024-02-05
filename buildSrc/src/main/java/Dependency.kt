@@ -11,7 +11,8 @@ object Dependency {
     }
 
     object HILT {
-
+        const val HILT = "com.google.dagger:hilt-android:${Version.HILT}"
+        const val HILT_COMPILE = "com.google.dagger:hilt-android-compiler:${Version.HILT}"
     }
 
     object COMPOSE {

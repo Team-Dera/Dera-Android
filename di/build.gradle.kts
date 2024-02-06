@@ -32,6 +32,9 @@ android {
     kotlinOptions {
         jvmTarget = ProjectProperties.JVM_VERSION
     }
+    buildFeatures {
+        buildConfig = true
+    }
 }
 
 kapt {
@@ -40,12 +43,21 @@ kapt {
 
 dependencies {
 
+    implementation(project(":data"))
+    implementation(project(":domain"))
+
     implementation(Dependency.ANDROIDX.CORE)
     implementation(Dependency.ANDROIDX.APPCOMPAT)
     implementation(Dependency.ANDROIDX.MATERIAL)
 
     implementation(Dependency.HILT.HILT)
     kapt(Dependency.HILT.HILT_COMPILE)
+
+    implementation(Dependency.OKHTTP.OKHTTP)
+    implementation(Dependency.OKHTTP.LOGGING_INTERCEPTOR)
+
+    implementation(Dependency.RETROFIT.RETROFIT_CLIENT)
+    implementation(Dependency.RETROFIT.GSON_CONVERT)
 
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")

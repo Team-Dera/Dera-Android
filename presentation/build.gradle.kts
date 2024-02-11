@@ -68,6 +68,8 @@ dependencies {
     implementation(Dependency.HILT.HILT)
     kapt(Dependency.HILT.HILT_COMPILE)
 
+    implementation(Dependency.ORBIT.VIEWMODEL)
+
     implementation("androidx.compose.ui:ui")
     implementation("androidx.compose.ui:ui-graphics")
     implementation("androidx.compose.ui:ui-tooling-preview")

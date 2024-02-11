@@ -16,4 +16,6 @@ object Version {
 
     const val ACTIVITY_KTX = "1.8.2"
     const val FRAGMENT_KTX = "1.6.2"
+
+    const val ORBIT_MVI = "6.1.0"
 }

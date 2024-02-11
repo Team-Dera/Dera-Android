@@ -15,6 +15,10 @@ object Dependency {
         const val HILT_COMPILE = "com.google.dagger:hilt-android-compiler:${Version.HILT}"
     }
 
+    object ORBIT {
+        const val VIEWMODEL = "org.orbit-mvi:orbit-viewmodel:${Version.ORBIT_MVI}"
+    }
+
     object COMPOSE {
         const val ACTIVITY = "androidx.activity:activity-compose:${Version.COMPOSE_ACTIVITY}"
         const val BOM = "androidx.compose:compose-bom:${Version.COMPOSE_BOM}"

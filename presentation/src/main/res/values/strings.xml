@@ -2,4 +2,14 @@
     <string name="app_name">Dera</string>
     <string name="signin">signin</string>
     <string name="signup">signup</string>
+    <string name="bad_request_exception">잘못된 요청</string>
+    <string name="unauthorized_exception">토큰 만료</string>
+    <string name="forbidden_exception">권한 없음</string>
+    <string name="user_not_found_exception">찾을수 없음</string>
+    <string name="user_already_exists">이미 존재함</string>
+    <string name="too_many_requests">요청 너무 많음</string>
+    <string name="internal_server_error">서버 에러</string>
+    <string name="timeout_exception">시간 초과</string>
+    <string name="offline_exception">오프라인</string>
+    <string name="unknown_error">알수없음</string>
 </resources>

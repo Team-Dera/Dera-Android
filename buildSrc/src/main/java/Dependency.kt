@@ -17,12 +17,14 @@ object Dependency {
 
     object ORBIT {
         const val VIEWMODEL = "org.orbit-mvi:orbit-viewmodel:${Version.ORBIT_MVI}"
+        const val COMPOSE = "org.orbit-mvi:orbit-compose:${Version.ORBIT_MVI}"
     }
 
     object COMPOSE {
         const val ACTIVITY = "androidx.activity:activity-compose:${Version.COMPOSE_ACTIVITY}"
         const val BOM = "androidx.compose:compose-bom:${Version.COMPOSE_BOM}"
         const val NAVIGATION = "androidx.navigation:navigation-compose:${Version.COMPOSE_NAVIGATION}"
+        const val NAVIGATION_HILT = "androidx.hilt:hilt-navigation-compose:${Version.COMPOSE_NAVIGATION_HILT}"
     }
 
     object ANDROIDX {

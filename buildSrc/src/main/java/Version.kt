@@ -11,6 +11,7 @@ object Version {
     const val COMPOSE_ACTIVITY = "1.8.2"
     const val COMPOSE_BOM = "2023.03.00"
     const val COMPOSE_NAVIGATION = "2.7.6"
+    const val COMPOSE_NAVIGATION_HILT = "1.1.0"
 
     const val LIFECYCLE_RUNTIME_KTX = "2.6.2"
 

@@ -64,11 +64,13 @@ dependencies {
     implementation(Dependency.COMPOSE.NAVIGATION)
     implementation(Dependency.COMPOSE.ACTIVITY)
     implementation(platform(Dependency.COMPOSE.BOM))
+    implementation(Dependency.COMPOSE.NAVIGATION_HILT)
 
     implementation(Dependency.HILT.HILT)
     kapt(Dependency.HILT.HILT_COMPILE)
 
     implementation(Dependency.ORBIT.VIEWMODEL)
+    implementation(Dependency.ORBIT.COMPOSE)
 
     implementation("androidx.compose.ui:ui")
     implementation("androidx.compose.ui:ui-graphics")

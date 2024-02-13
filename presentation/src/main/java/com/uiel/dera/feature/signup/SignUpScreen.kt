@@ -1,6 +1,5 @@
 package com.uiel.dera.feature.signup
 
-import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -18,23 +17,26 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
-import androidx.lifecycle.viewmodel.compose.viewModel
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
+import org.orbitmvi.orbit.compose.collectAsState
+
 
 @Composable
-fun SignUpScreen(
+internal fun SignUpScreen(
     navController: NavController,
-    signUpScreenViewModel: SignUpScreenViewModel = viewModel()
+    signUpScreenViewModel: SignUpScreenViewModel = hiltViewModel(),
 ) {
     val uiState by signUpScreenViewModel.signUpState.observeAsState()
+    val state by signUpScreenViewModel.collectAsState()
 
     Column(
         modifier = Modifier.fillMaxSize()
     ) {
         SignUpInputs(
-            name = { uiState?.name ?: "" },
-            id = { uiState?.id ?: "" },
-            password = { uiState?.password ?: "" },
+            name = { state.name },
+            id = { state.id },
+            password = { state.password },
             onNameChanged = { signUpScreenViewModel.updateName(name = it)},
             onIdChanged = {signUpScreenViewModel.updateId(id = it)},
             onPwChanged = {signUpScreenViewModel.updatePassword(password = it)}
